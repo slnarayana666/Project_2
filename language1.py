@@ -1,4 +1,4 @@
-Language 01
+Language 0
 
 class BasicLexer(Lexer):
 	tokens = { NAME, NUMBER, STRING }
@@ -31,3 +31,8 @@ class BasicLexer(Lexer):
 	def newline(self, t):
 		self.lineno = t.value.count('\n')
 
+Added some below
+
+ # convert it into a python integer
+        t.value = int(t.value)
+        return t
